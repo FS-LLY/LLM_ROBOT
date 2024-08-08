@@ -1,0 +1,1 @@
+/usr/bin/g++ -g CMakeFiles/gripper.dir/gripper_test.cpp.o -o gripper  /home/lly/Downloads/flexiv_rdk-0.10/lib/libflexiv_rdk.x86_64-linux-gnu.a 

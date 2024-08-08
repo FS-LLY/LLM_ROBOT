@@ -1,0 +1,7 @@
+/home/lly/.local/share/ov/pkg/isaac-sim-2023.1.1/standalone_examples/api/omni.isaac.manipulators/RIZON4/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/lly/.local/share/ov/pkg/isaac-sim-2023.1.1/standalone_examples/api/omni.isaac.manipulators/RIZON4/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/lly/.local/share/ov/pkg/isaac-sim-2023.1.1/standalone_examples/api/omni.isaac.manipulators/RIZON4/cmake-build-debug/base/CMakeFiles/sine.dir
+/home/lly/.local/share/ov/pkg/isaac-sim-2023.1.1/standalone_examples/api/omni.isaac.manipulators/RIZON4/cmake-build-debug/base/CMakeFiles/test_every_joint.dir
+/home/lly/.local/share/ov/pkg/isaac-sim-2023.1.1/standalone_examples/api/omni.isaac.manipulators/RIZON4/cmake-build-debug/base/CMakeFiles/gripper.dir
+/home/lly/.local/share/ov/pkg/isaac-sim-2023.1.1/standalone_examples/api/omni.isaac.manipulators/RIZON4/cmake-build-debug/base/CMakeFiles/edit_cache.dir
+/home/lly/.local/share/ov/pkg/isaac-sim-2023.1.1/standalone_examples/api/omni.isaac.manipulators/RIZON4/cmake-build-debug/base/CMakeFiles/rebuild_cache.dir

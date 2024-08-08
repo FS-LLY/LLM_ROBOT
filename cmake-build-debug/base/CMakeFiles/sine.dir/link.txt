@@ -1,0 +1,1 @@
+/usr/bin/g++ -g CMakeFiles/sine.dir/sine_control_demo.cpp.o -o sine  /home/lly/Downloads/flexiv_rdk-0.10/lib/libflexiv_rdk.x86_64-linux-gnu.a 
