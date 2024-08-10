@@ -7,6 +7,6 @@ message("OS: ${CMAKE_SYSTEM_NAME}")
 
 add_subdirectory(base)
 
-set_target_properties(test_every_joint PROPERTIES
+set_target_properties(main PROPERTIES
         CXX_STANDARD 17
         CXX_STANDARD_REQUIRED ON)
