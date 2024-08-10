@@ -64,10 +64,8 @@ int main() {
     // 清除错误指令（如果可行）
     if (robot.isFault()) {
         log.warn("Fault occurred on robot server, trying to clear ...");
-        // Try to clear the fault
         robot.clearFault();
         std::this_thread::sleep_for(std::chrono::seconds(2));
-        // Check again
         if (robot.isFault()) {
             log.error("Fault cannot be cleared, exiting ...");
             return 1;
@@ -75,14 +73,14 @@ int main() {
         log.info("Fault on robot server is cleared");
     }
 
-    // Enable the robot, make sure the E-stop is released before enabling
     log.info("Enabling robot ...");
     robot.enable();
     robot.setMode(
             flexiv::Mode::NRT_PRIMITIVE_EXECUTION); // 初始化需要执行 home 函数
+    
+    // 初始条件下爪子是张开的，机械臂回到 home 位置
     gripper.move(0.09, 0.1, 20);
     robot.executePrimitive("Home()");
-    // Wait for reached target
     while (flexiv::utility::parsePtStates(robot.getPrimitiveStates(),
                                           "reachedTarget") != "1") {
         std::this_thread::sleep_for(std::chrono::seconds(1));
@@ -104,26 +102,22 @@ int main() {
                 // 从JSON对象中提取向量
                 std::vector<double> joint_positions =
                         j["joint_positions"].get<std::vector<double>>();
-                std::vector<double> joint_velocities = {0, 0, 0, 0, 0, 0, 0};
-                bool effort = j["joint_efforts"].get<bool>();
+                std::vector<double> joint_velocities = {0, 0, 0, 0, 0, 0, 0};  // 不用速度来看效果还挺不错的
+                bool effort = j["joint_efforts"].get<bool>();  
+                // 读取上升沿 作为判断夹爪开闭的 flag
                 if (last_flag && !effort) {
                     is_gripper_closed = !is_gripper_closed;
                 }
                 last_flag = effort;
 
-                //                real_pos = vector_add(joint_positions, default_pos);
                 robot.streamJointPosition(joint_positions, joint_velocities,
                                           default_acc);
 
-                // Set initial pose to current TCP pose
                 robot.getRobotStates(robotStates);
-                auto initPose = robotStates.tcpPose;       //                std::cout << "deg: ";
+                auto initPose = robotStates.tcpPose;  // 获取实时位姿信息
                 std::cout<<std::setprecision(3) << "current TCP pose: [x: " << initPose[0] << " y: " << initPose[1] << " z:" << initPose[2]
                           << "], unit: m, gripper state: " << (is_gripper_closed ? "close" : "open") << "\r";
-                //                for (const auto &vel: joint_positions) {
-                //                    std::cout << vel / M_PI * 180 << " ";
-                //                }
-                //                std::cout << std::endl;
+        
                 if (!is_gripper_closed) {
                     gripper.move(0.09, 0.1, 10);
                 } else {
