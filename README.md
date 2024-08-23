@@ -1,6 +1,42 @@
 # LLM_ROBOT
 
-## Isaac Gym 仿真
+## Isaac Sim 仿真
+
+环境要求：
+
+安装Isaac Sim：
+
+-[Isaac Sim](https://developer.nvidia.com/isaac/sim)
+
+帮助文档：
+
+-[OMNIVERSE Isaac Sim](https://docs.omniverse.nvidia.com/isaacsim/latest/overview.html)
+
+将此repo clone到 Isaac Sim 安装路径下standalone_examples/api/omni.isaac.manipulators
+
+模拟用代码文件树：
+``` bash
+├── controllers
+│   ├── pick_place.py
+│   ├── rmpflow.py
+├── rmpflow
+│   ├── flexiv_rizon4_total
+│   │   ├──flexiv_rizon4_total.usd #模型 
+│   ├── denso_rmpflow_common.yaml
+│   ├── flexiv_rizon4_total.urdf
+│   ├── rmpflow_config.yaml
+│   ├── robot_descriptor.yaml
+├── tasks  
+│   ├── follow_target.py #跟踪目标
+│   ├── my_gripper.py #RIZON4四关节抓手
+│   ├── pick_place.py #拾取放下物体
+│   ├── my_pick_place.py #多次拾取放下物体
+├── pick_up_example.py
+├── pick_up_example_backup.py
+├── gripper_control.py
+├── follow_target_example.py
+
+```
 
 ## LLM 交互
 
