@@ -1,5 +1,9 @@
 # LLM_ROBOT
 
+## 运行
+
+完成配置后，运行`run.sh`
+
 ## Isaac Sim 仿真
 
 环境要求：
