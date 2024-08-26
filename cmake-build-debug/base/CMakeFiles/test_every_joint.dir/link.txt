@@ -1,1 +1,0 @@
-/usr/bin/g++ -g CMakeFiles/test_every_joint.dir/test_every_joint.cpp.o -o test_every_joint  /home/lly/Downloads/flexiv_rdk-0.10/lib/libflexiv_rdk.x86_64-linux-gnu.a 

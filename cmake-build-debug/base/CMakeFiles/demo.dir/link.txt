@@ -1,1 +1,0 @@
-/usr/bin/g++ -g CMakeFiles/demo.dir/__/test_control.cpp.o -o demo  /home/lly/Downloads/flexiv_rdk-0.10/lib/libflexiv_rdk.x86_64-linux-gnu.a 
