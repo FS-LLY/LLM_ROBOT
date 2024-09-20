@@ -42,6 +42,12 @@
 
 ```
 
+一键运行planning脚本：
+在Isaac Sim 安装路径下运行：
+```
+./python.sh standalone_examples/api/omni.isaac.manipulators/RIZON4/pick_place_example.py
+```
+
 ## LLM 交互
 
 ## Flexiv 机械臂控制
