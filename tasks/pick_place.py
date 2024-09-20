@@ -12,8 +12,8 @@ from typing import Optional
 
 import numpy as np
 import omni.isaac.core.tasks as tasks
-from my_pick_place import MyPickPlace
-from my_gripper import MyGripper
+from tasks.my_pick_place import MyPickPlace
+from tasks.my_gripper import MyGripper
 from omni.isaac.core.utils.nucleus import get_assets_root_path
 from omni.isaac.core.utils.stage import add_reference_to_stage
 from omni.isaac.manipulators import SingleManipulator

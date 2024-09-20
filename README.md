@@ -1,5 +1,9 @@
 # LLM_ROBOT
 
+## 运行
+
+完成配置后，运行`run.sh`
+
 ## Isaac Sim 仿真
 
 环境要求：
@@ -36,6 +40,12 @@
 ├── gripper_control.py
 ├── follow_target_example.py
 
+```
+
+一键运行planning脚本：
+在Isaac Sim 安装路径下运行：
+```
+./python.sh standalone_examples/api/omni.isaac.manipulators/RIZON4/pick_place_example.py
 ```
 
 ## LLM 交互
