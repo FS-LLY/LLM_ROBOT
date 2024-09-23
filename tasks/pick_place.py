@@ -11,7 +11,7 @@ import os
 from typing import Optional
 
 import numpy as np
-import omni.isaac.core.tasks as tasks
+#import omni.isaac.core.tasks as tasks
 from tasks.my_pick_place import MyPickPlace
 from tasks.my_gripper import MyGripper
 from omni.isaac.core.utils.nucleus import get_assets_root_path
@@ -33,7 +33,7 @@ class PickPlace(MyPickPlace):
         target_position: Optional[np.ndarray] = None,
         offset: Optional[np.ndarray] = None,
     ) -> None:
-        tasks.MyPickPlace.__init__(
+        MyPickPlace.__init__(
             self,
             name=name,
             object_kind = kind,
